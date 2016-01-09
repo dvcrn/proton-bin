@@ -55,6 +55,18 @@
   padding: 0;
 }
 
+.proton-which-key {
+  .proton-key {
+    color: @text-color-info;
+  }
+  .proton-key-category {
+    color: @text-color-warning;
+  }
+  .proton-key-action {
+    color: @text-color-success;
+  }
+}
+
 .proton-modal-panel {
   font-family: Courier New;
 }
@@ -72,8 +84,23 @@
   width: 45px;
 }
 
-
 // other overrides
 atom-panel.modal.tab-switcher {
   display: none !important;
+}
+
+.proton-mode {
+  atom-pane-container {
+    opacity: 0.5;
+  }
+  atom-panel-container {
+    &.right, &.left {
+      opacity: 0.5;
+    }
+  }
+}
+
+.proton-mode::shadow .cursor {
+  border-color: red;
+  border-width: 10px;
 }
